@@ -5,3 +5,10 @@
 *.db
 *.db-shm
 *.db-wal
+Публикация/
+.vs/
+TestResults/
+coverage/
+artifacts/
+*.trx
+build.log
