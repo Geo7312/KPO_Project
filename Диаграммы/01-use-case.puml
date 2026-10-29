@@ -1,0 +1,52 @@
+@startuml
+left to right direction
+skinparam shadowing false
+actor "Приёмщик" as Receptionist
+actor "Мастер" as Technician
+actor "Администратор" as Admin
+
+rectangle "Система учёта ремонта компьютерной техники" {
+  usecase "Вести учёт клиента\nи заказа" as Account
+  usecase "Оформить заказ" as Create
+  usecase "Зарегистрировать клиента\nи устройство" as Register
+  usecase "Проверить данные\nи присвоить номер" as Validate
+  usecase "Зафиксировать\nрешение клиента" as Decision
+  usecase "Выдать устройство" as Issue
+  usecase "Распечатать акт\nприёма или выдачи" as Print
+
+  usecase "Сохранить диагностику\nи план работ" as Diagnose
+  usecase "Добавить выполненную\nработу" as Work
+  usecase "Списать запчасть\nв заказ" as Part
+  usecase "Проверить и пересчитать\nостаток" as Stock
+  usecase "Отметить готовность\nк выдаче" as Ready
+
+  usecase "Добавить запчасть\nв каталог" as Catalog
+  usecase "Просмотреть сводку\nпо заказам" as Summary
+}
+
+Receptionist -- Account
+Receptionist -- Print
+Technician -- Diagnose
+Technician -- Work
+Technician -- Part
+Technician -- Ready
+Admin -- Catalog
+Admin -- Summary
+
+Account ..> Create : <<include>>
+Account ..> Decision : <<include>>
+Account ..> Issue : <<include>>
+Create ..> Register : <<include>>
+Create ..> Validate : <<include>>
+Part ..> Stock : <<include>>
+
+note right of Decision
+  Вкладка «Заказы» → выбор заказа → карточка.
+  После диагностики приёмщик фиксирует
+  согласие или отказ клиента.
+end note
+note bottom of Admin
+  Администратор также может выполнять
+  операции приёмщика и мастера.
+end note
+@enduml

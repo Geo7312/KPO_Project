@@ -1,0 +1,26 @@
+@startuml
+skinparam shadowing false
+node "Рабочее место сотрудника" <<device>> as PC {
+  node "Windows 10/11" <<executionEnvironment>> as Windows {
+    node ".NET 8 Desktop Runtime" <<executionEnvironment>> as DotNet {
+      artifact "RepairDesk.exe\nзапуск приложения" as EXE
+      artifact "RepairDesk.dll\nкод WPF и сервисов" as DLL
+      artifact "EF Core / SQLite provider DLLs" as LIBS
+    }
+    artifact "repair.db\n%LOCALAPPDATA%\\RepairDesk\nлокальный файл SQLite" as DB
+    node "Windows Print Spooler" <<executionEnvironment>> as Spooler
+  }
+}
+node "Принтер\nпечать актов" <<device>> as Printer
+
+EXE ..> DLL : запускает
+DLL ..> LIBS : использует
+LIBS ..> DB : локальный файловый доступ
+EXE ..> Spooler : печать
+Spooler -- Printer : USB / сеть
+
+note bottom of PC
+  Приложение и база размещены на одном ПК.
+  Отдельного сервера и сетевой БД нет.
+end note
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+skinparam componentStyle uml2
+skinparam shadowing false
+
+package "Представление и навигация" {
+  [MainWindow.xaml\nWPF: вкладки и карточка заказа] as View
+  [MainViewModel\nкоманды и состояние] as VM
+}
+package "Прикладная логика" {
+  [OrderService\nзаказ и решение клиента] as Orders
+  [InventoryService\nзапчасти и остаток] as Inventory
+  [AccessService\nпроверка роли] as Access
+  [SummaryService\nсводка] as Summary
+  [DocumentService\nакты приёма и выдачи] as Documents
+}
+package "Хранение данных" {
+  [RepairDbContext\nEF Core контекст] as Context
+  [EF Core + SQLite provider] as Provider
+  artifact "repair.db\n%LOCALAPPDATA%\\RepairDesk" as DB
+}
+package "Предметная область" {
+  [Customer, Device, RepairOrder\nRepairWork, SparePart, PartUsage] as Domain
+}
+[PrintDialog / Windows Print Spooler] as Printer
+
+View ..> VM : команды
+VM ..> Orders : заказы
+VM ..> Inventory : склад
+VM ..> Summary : сводка
+VM ..> Documents : печать
+Orders ..> Access : права
+Inventory ..> Access : права
+Orders ..> Context : данные
+Inventory ..> Context : данные
+Summary ..> Context : чтение
+Orders ..> Domain : сущности
+Inventory ..> Domain : сущности
+Context ..> Provider : ORM
+Provider ..> DB : SQLite
+Documents ..> Printer : диалог печати
+@enduml

@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-10-29T00:00:00.000Z" agent="RepairDesk UML" version="24.7.17" type="device" pages="3">
+  <diagram id="usecases" name="1 Варианты использования">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1180" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="usecases_system" value="Система учёта ремонта компьютерной техники" style="swimlane;html=1;startSize=48;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=24;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="1700" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_reception" value="Приёмщик" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#17324F;strokeColor=#17324F;fontColor=#17324F;fontSize=21;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="175" width="130" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_technician" value="Мастер" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#17324F;strokeColor=#17324F;fontColor=#17324F;fontSize=21;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="600" width="130" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_admin" value="Администратор" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#17324F;strokeColor=#17324F;fontColor=#17324F;fontSize=21;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="925" width="140" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_account" value="Вести учёт клиента&lt;br&gt;и заказа" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="330" y="115" width="340" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_create" value="Оформить заказ" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="780" y="85" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_register" value="Зарегистрировать клиента&lt;br&gt;и устройство" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="1240" y="60" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_validate" value="Проверить данные&lt;br&gt;и присвоить номер" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="1240" y="165" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_decision" value="Зафиксировать&lt;br&gt;решение клиента" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="780" y="265" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_issue" value="Выдать устройство" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="780" y="410" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_print" value="Распечатать акт&lt;br&gt;приёма или выдачи" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="330" y="405" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_route_note" value="Путь в интерфейсе:&lt;br&gt;«Заказы» → выбор заказа → карточка.&lt;br&gt;После диагностики приёмщик выбирает&lt;br&gt;«Клиент согласен» или «Клиент отказался»." style="shape=note;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fillColor=#FFF7DF;strokeColor=#A78D42;fontColor=#17324F;fontSize=16;spacingLeft=14;spacingRight=12;" vertex="1" parent="usecases_system">
+          <mxGeometry x="1195" y="280" width="380" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_diagnose" value="Сохранить диагностику&lt;br&gt;и план работ" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="330" y="575" width="340" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_work" value="Добавить выполненную&lt;br&gt;работу" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="790" y="560" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_part" value="Списать запчасть&lt;br&gt;в заказ" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="790" y="705" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_stock" value="Проверить и пересчитать&lt;br&gt;остаток" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="1240" y="705" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_ready" value="Отметить готовность&lt;br&gt;к выдаче" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="330" y="720" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_catalog" value="Добавить запчасть&lt;br&gt;в каталог" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="330" y="905" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_summary" value="Просмотреть сводку&lt;br&gt;по заказам" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#EAF6FC;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="usecases_system">
+          <mxGeometry x="790" y="905" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_admin_note" value="Администратор также может выполнять&lt;br&gt;операции приёмщика и мастера." style="shape=note;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fillColor=#FFF7DF;strokeColor=#A78D42;fontColor=#17324F;fontSize=16;spacingLeft=14;spacingRight=12;" vertex="1" parent="usecases_system">
+          <mxGeometry x="1225" y="905" width="350" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_rec_account" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_reception" target="usecases_account">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_rec_print" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_reception" target="usecases_print">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_master_diag" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_technician" target="usecases_diagnose">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_master_work" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_technician" target="usecases_work">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_master_part" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_technician" target="usecases_part">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_master_ready" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_technician" target="usecases_ready">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_admin_catalog" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_admin" target="usecases_catalog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_a_admin_summary" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="usecases_admin" target="usecases_summary">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_i_account_create" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="usecases_account" target="usecases_create">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_i_account_decision" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="usecases_account" target="usecases_decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_i_account_issue" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="usecases_account" target="usecases_issue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_i_create_register" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="usecases_create" target="usecases_register">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_i_create_validate" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="usecases_create" target="usecases_validate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="usecases_i_part_stock" value="«include»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="usecases_part" target="usecases_stock">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="components" name="2 Компоненты">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="components_ui" value="Представление и навигация" style="swimlane;html=1;startSize=42;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=21;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="70" width="410" height="615" as="geometry" />
+        </mxCell>
+        <mxCell id="components_app" value="Прикладная логика" style="swimlane;html=1;startSize=42;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=21;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="70" width="780" height="615" as="geometry" />
+        </mxCell>
+        <mxCell id="components_storage" value="Хранение данных" style="swimlane;html=1;startSize=42;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=21;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="70" width="410" height="615" as="geometry" />
+        </mxCell>
+        <mxCell id="components_domain_pkg" value="Предметная область" style="swimlane;html=1;startSize=42;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=21;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="745" width="780" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="components_print_pkg" value="Средства Windows" style="swimlane;html=1;startSize=42;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=21;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="745" width="410" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="components_view" value="MainWindow.xaml&lt;br&gt;WPF: вкладки и карточка заказа" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_ui">
+          <mxGeometry x="45" y="115" width="320" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="components_vm" value="MainViewModel&lt;br&gt;команды и состояние" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_ui">
+          <mxGeometry x="45" y="340" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_order" value="OrderService&lt;br&gt;заказ и решение клиента" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_app">
+          <mxGeometry x="55" y="100" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_inventory" value="InventoryService&lt;br&gt;запчасти и остаток" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_app">
+          <mxGeometry x="425" y="100" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_access" value="AccessService&lt;br&gt;проверка роли" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_app">
+          <mxGeometry x="55" y="270" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_summary" value="SummaryService&lt;br&gt;сводка" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_app">
+          <mxGeometry x="425" y="270" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_documents" value="DocumentService&lt;br&gt;акты приёма и выдачи" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_app">
+          <mxGeometry x="240" y="450" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_context" value="RepairDbContext&lt;br&gt;EF Core контекст" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_storage">
+          <mxGeometry x="45" y="100" width="320" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="components_provider" value="EF Core + SQLite provider&lt;br&gt;библиотеки .NET" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_storage">
+          <mxGeometry x="45" y="270" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="components_db" value="«artifact» repair.db&lt;br&gt;%LOCALAPPDATA%\RepairDesk" style="shape=note;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#E2EDF8;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_storage">
+          <mxGeometry x="45" y="445" width="320" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="components_entities" value="Customer · Device · RepairOrder&lt;br&gt;RepairWork · SparePart · PartUsage" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_domain_pkg">
+          <mxGeometry x="115" y="65" width="550" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="components_printer" value="PrintDialog / Windows Print Spooler" style="shape=component;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#BCE5F6;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="components_print_pkg">
+          <mxGeometry x="45" y="70" width="320" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_view_vm" value="команды" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_view" target="components_vm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_vm_order" value="создание, согласование, выдача" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_vm" target="components_order">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_vm_inventory" value="склад" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_vm" target="components_inventory">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_vm_summary" value="показатели" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_vm" target="components_summary">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_vm_docs" value="печать" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_vm" target="components_documents">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_order_access" value="права" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_order" target="components_access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_inventory_access" value="права" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_inventory" target="components_access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_order_context" value="данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_order" target="components_context">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_inventory_context" value="данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_inventory" target="components_context">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_summary_context" value="чтение" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_summary" target="components_context">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_context_provider" value="ORM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_context" target="components_provider">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_provider_db" value="SQLite" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_provider" target="components_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_order_domain" value="сущности" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_order" target="components_entities">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_inventory_domain" value="сущности" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_inventory" target="components_entities">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="components_d_documents_printer" value="диалог печати" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="components_documents" target="components_printer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="deployment" name="3 Развёртывание">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="deployment_workstation" value="«device» Рабочее место сотрудника" style="swimlane;html=1;startSize=52;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=3;align=center;fontColor=#17324F;fontSize=22;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="65" width="1290" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_windows" value="«executionEnvironment» Windows 10/11" style="swimlane;html=1;startSize=50;horizontal=1;rounded=0;fillColor=#F7FBFE;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="deployment_workstation">
+          <mxGeometry x="60" y="110" width="1170" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_dotnet" value="«executionEnvironment» .NET 8 Desktop Runtime" style="swimlane;html=1;startSize=50;horizontal=1;rounded=0;fillColor=#F7FBFE;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=20;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="deployment_windows">
+          <mxGeometry x="70" y="125" width="650" height="455" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_exe" value="«artifact»&lt;br&gt;RepairDesk.exe&lt;br&gt;запуск приложения" style="shape=note;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#E2EDF8;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="deployment_dotnet">
+          <mxGeometry x="50" y="120" width="250" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_dll" value="«artifact»&lt;br&gt;RepairDesk.dll&lt;br&gt;код WPF и сервисов" style="shape=note;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#E2EDF8;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="deployment_dotnet">
+          <mxGeometry x="350" y="120" width="250" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_libs" value="«artifact»&lt;br&gt;EF Core / SQLite provider DLLs" style="shape=note;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#E2EDF8;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="deployment_dotnet">
+          <mxGeometry x="185" y="310" width="290" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_db" value="«artifact» repair.db&lt;br&gt;%LOCALAPPDATA%\RepairDesk&lt;br&gt;локальный файл SQLite" style="shape=note;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#E2EDF8;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="deployment_windows">
+          <mxGeometry x="785" y="165" width="310" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_spooler" value="«executionEnvironment»&lt;br&gt;Windows Print Spooler" style="swimlane;html=1;startSize=50;horizontal=1;rounded=0;fillColor=#F7FBFE;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=2;align=center;fontColor=#17324F;fontSize=20;fontStyle=1;container=1;collapsible=0;fontSize=16;startSize=76;" vertex="1" parent="deployment_windows">
+          <mxGeometry x="785" y="440" width="310" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_single_pc" value="Приложение и база размещены на одном ПК.&lt;br&gt;Отдельного сервера и сетевой БД нет." style="shape=note;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;fillColor=#FFF7DF;strokeColor=#A78D42;fontColor=#17324F;fontSize=16;spacingLeft=14;spacingRight=12;" vertex="1" parent="deployment_workstation">
+          <mxGeometry x="230" y="815" width="760" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_printer" value="«device» Принтер" style="swimlane;html=1;startSize=52;horizontal=1;rounded=0;fillColor=#F4FAFD;swimlaneFillColor=#FFFFFF;strokeColor=#2A7296;strokeWidth=3;align=center;fontColor=#17324F;fontSize=22;fontStyle=1;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="1485" y="425" width="240" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_print_job" value="Печать актов&lt;br&gt;приёма и выдачи" style="shape=note;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#E2EDF8;strokeColor=#2A7296;strokeWidth=2;fontColor=#17324F;fontSize=18;spacing=8;" vertex="1" parent="deployment_printer">
+          <mxGeometry x="20" y="78" width="200" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_e_exe_dll" value="запускает" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="deployment_exe" target="deployment_dll">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_e_dll_libs" value="использует" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="deployment_dll" target="deployment_libs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_e_libs_db" value="локальный файловый доступ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="deployment_libs" target="deployment_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_e_exe_spooler" value="печать" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2A7296;strokeWidth=2;dashed=1;dashPattern=7 5;endArrow=open;endFill=0;fontColor=#17324F;fontSize=15;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="deployment_exe" target="deployment_spooler">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment_e_spooler_printer" value="USB / сеть" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#17324F;strokeWidth=2;endArrow=none;startArrow=none;" edge="1" parent="1" source="deployment_spooler" target="deployment_printer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
