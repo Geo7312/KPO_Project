@@ -5,7 +5,7 @@
 ## Запуск
 
 1. Откройте `RepairDesk.sln` в Visual Studio 2022 с компонентом «Разработка классических приложений .NET» или выполните `dotnet run --project RepairDesk/RepairDesk.csproj` из этой папки.
-2. Требуется .NET 8 Desktop Runtime. При первой сборке NuGet загружает `Microsoft.EntityFrameworkCore.Sqlite` версии 8.0.20.
+2. Требуется .NET 8 Desktop Runtime. При первой сборке NuGet загружает `Microsoft.EntityFrameworkCore.Sqlite` версии 8.0.33 и SQLitePCLRaw 2.1.14.
 3. База создаётся автоматически в `%LOCALAPPDATA%\RepairDesk\repair.db`.
 
 ## Сценарий проверки
@@ -29,3 +29,19 @@
 - `Диаграммы` — редактируемый файл трёх UML-диаграмм в формате `.drawio` для [diagrams.net](https://app.diagrams.net/) и исходники PlantUML.
 
 Проверка: `dotnet run --project RepairDesk.Smoke/RepairDesk.Smoke.csproj`. Тестовая база создаётся в папке сборки проверочного проекта и не затрагивает рабочие данные.
+
+## Проверки и выпуск
+
+Репозиторий использует GitHub Flow: `main` содержит проверенную версию, каждое изменение делается в ветке `feature/...` или `fix/...` и попадает в `main` через pull request. Правила коммитов, проверки CI, метрики и выпуск описаны в [docs/source-control.md](docs/source-control.md).
+
+Локально выполните `git config core.hooksPath .githooks`, чтобы включить проверку сообщений коммитов. Основные команды проверки:
+
+```powershell
+dotnet restore RepairDesk.sln
+dotnet format whitespace RepairDesk.sln --verify-no-changes --no-restore
+dotnet build RepairDesk.sln -c Release --no-restore
+dotnet test RepairDesk.Tests/RepairDesk.Tests.csproj -c Release --no-build --collect:"XPlat Code Coverage" --logger "trx;LogFileName=tests.trx" --results-directory TestResults
+dotnet run --project RepairDesk.Smoke/RepairDesk.Smoke.csproj -c Release --no-build
+```
+
+Пайплайн публикует архив приложения и отчёты о тестах, покрытии и метриках как артефакты GitHub Actions. Тег вида `v1.0.0` запускает создание GitHub Release после успешных проверок. Защита `main` настраивается владельцем репозитория по инструкции в `docs/source-control.md`.

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairDesk", "RepairDesk\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairDesk.Smoke", "RepairDesk.Smoke\RepairDesk.Smoke.csproj", "{4CDC6130-D1C6-441A-B905-665EC60D25CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepairDesk.Tests", "RepairDesk.Tests\RepairDesk.Tests.csproj", "{A4194B95-8C1F-4593-9C30-00EB7C451D6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{4CDC6130-D1C6-441A-B905-665EC60D25CD}.Release|x64.Build.0 = Release|Any CPU
 		{4CDC6130-D1C6-441A-B905-665EC60D25CD}.Release|x86.ActiveCfg = Release|Any CPU
 		{4CDC6130-D1C6-441A-B905-665EC60D25CD}.Release|x86.Build.0 = Release|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Debug|x64.Build.0 = Debug|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Debug|x86.Build.0 = Debug|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Release|x64.Build.0 = Release|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Release|x86.ActiveCfg = Release|Any CPU
+		{A4194B95-8C1F-4593-9C30-00EB7C451D6F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
