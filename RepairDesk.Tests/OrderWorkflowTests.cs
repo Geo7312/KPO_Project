@@ -51,8 +51,7 @@ public sealed class OrderWorkflowTests
         Assert.Multiple(() =>
         {
             Assert.That(saved.Status, Is.EqualTo(OrderStatus.InRepair));
-            // CI demonstration: deliberately wrong expectation on an isolated branch.
-            Assert.That(saved.IsApproved, Is.False);
+            Assert.That(saved.IsApproved, Is.True);
         });
     }
 
